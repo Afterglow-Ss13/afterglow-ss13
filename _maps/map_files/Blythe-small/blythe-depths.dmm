@@ -970,14 +970,6 @@
 /obj/machinery/light/small,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault/overseer)
-"in" = (
-/mob/living/simple_animal/hostile/raider/ranged,
-/turf/open/floor/f13{
-	color = "#ffe9de";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
-/area/f13/bunker/bunkerthree)
 "ip" = (
 /obj/machinery/light{
 	dir = 1
@@ -1326,18 +1318,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/vault/medical/chemistry)
-"kY" = (
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#c1caff"
-	},
-/mob/living/simple_animal/hostile/raider/ranged,
-/turf/open/floor/f13{
-	color = "#ffe9de";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
-/area/f13/bunker/bunkerthree)
 "kZ" = (
 /obj/effect/turf_decal/vg_decals/radiation,
 /turf/closed/wall/r_wall/f13vault{
@@ -1845,11 +1825,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral/white,
 /area/f13/vault/lavatory)
 "pw" = (
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/machinery/light{
 	dir = 1;
 	layer = 2.9
 	},
-/obj/machinery/rnd/science_lab,
 /turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,
 /area/f13/vault/science)
 "pz" = (
@@ -1917,9 +1897,7 @@
 	},
 /area/f13/vault/reactor)
 "pX" = (
-/obj/machinery/mineral/ore_redemption{
-	output_dir = 8
-	},
+/obj/machinery/mineral/ore_redemption,
 /turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,
 /area/f13/vault/science)
 "qa" = (
@@ -2567,7 +2545,7 @@
 	},
 /area/f13/vault/medical)
 "vB" = (
-/obj/machinery/rnd/production/circuit_imprinter,
+/obj/machinery/workbench/advanced,
 /turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,
 /area/f13/vault/science)
 "vF" = (
@@ -3333,7 +3311,7 @@
 	},
 /area/f13/bunker/bunkerthree)
 "Br" = (
-/mob/living/simple_animal/hostile/raider,
+/obj/effect/mob_spawn/human/fallout13/raider,
 /turf/open/floor/f13{
 	color = "#ffe9de";
 	icon_state = "darkrusty";
@@ -3525,15 +3503,6 @@
 /obj/machinery/light/small,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/custodial)
-"CV" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/raider/ranged,
-/turf/open/floor/f13{
-	color = "#ffe9de";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
-/area/f13/bunker/bunkerthree)
 "CX" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -5180,7 +5149,6 @@
 	name = "Vault Intercom";
 	pixel_y = 30
 	},
-/obj/machinery/workbench/advanced,
 /turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,
 /area/f13/vault/science)
 "Qv" = (
@@ -5429,14 +5397,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/overseer)
-"St" = (
-/obj/effect/mob_spawn/human/fallout13/raider,
-/turf/open/floor/f13{
-	color = "#d9c4b9";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
-/area/f13/bunker/bunkerthree)
 "Sw" = (
 /obj/machinery/light{
 	dir = 1;
@@ -5882,7 +5842,7 @@
 /obj/structure/chair/sofa/corner{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/raider,
+/obj/effect/mob_spawn/human/fallout13/raider,
 /turf/open/floor/f13{
 	color = "#ffe9de";
 	icon_state = "darkrusty";
@@ -5921,6 +5881,13 @@
 	icon_state = "2-i"
 	},
 /area/f13/vault/security/armory)
+"WF" = (
+/obj/machinery/rnd/science_lab,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,
+/area/f13/vault/science)
 "WG" = (
 /obj/machinery/shower{
 	pixel_y = 27
@@ -22865,7 +22832,7 @@ QR
 Dv
 QR
 pw
-ZW
+WF
 BJ
 Kb
 vA
@@ -30002,7 +29969,7 @@ TF
 Rk
 JI
 Pi
-St
+PW
 KS
 db
 PW
@@ -30408,10 +30375,10 @@ Wi
 wK
 bs
 ZN
-CV
+ms
+Br
 IU
-IU
-IU
+Br
 EF
 Wv
 Wv
@@ -30612,7 +30579,7 @@ IU
 VC
 VC
 IU
-in
+IU
 LG
 EF
 Wv
@@ -30814,7 +30781,7 @@ IU
 RL
 KA
 ms
-IU
+Br
 zA
 EF
 Wv
@@ -31012,8 +30979,8 @@ TF
 Rk
 kb
 IU
-kY
-IU
+Uf
+Br
 IU
 IU
 IU

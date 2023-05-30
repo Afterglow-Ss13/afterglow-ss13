@@ -3331,6 +3331,10 @@
 /area/f13/wasteland)
 "dNJ" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/item/blanket{
+	pixel_x = 7;
+	pixel_y = 2
+	},
 /obj/structure/bed/mattress{
 	icon_state = "mattress2"
 	},
@@ -4092,6 +4096,10 @@
 	pixel_y = 15
 	},
 /obj/structure/bed/old,
+/obj/item/blanket{
+	pixel_y = 15
+	},
+/obj/item/blanket,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common,
 /area/f13/building)
@@ -8045,6 +8053,13 @@
 	pixel_y = 15
 	},
 /obj/structure/bed/old,
+/obj/item/blanket{
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/obj/item/blanket{
+	pixel_x = 8
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common{
 	color = "#888888"
@@ -9670,6 +9685,10 @@
 	pixel_y = 15
 	},
 /obj/structure/bed/old,
+/obj/item/blanket{
+	pixel_y = 15
+	},
+/obj/item/blanket,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common{
 	color = "#888888"
@@ -17450,6 +17469,13 @@
 	pixel_y = 15
 	},
 /obj/structure/bed/old,
+/obj/item/blanket{
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/obj/item/blanket{
+	pixel_x = 8
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common,
 /area/f13/building/tribal)
