@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ad" = (
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhighcargo,
+/obj/structure/girder,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -52,10 +52,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker/bunkerthree)
 "an" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/f13/attachments,
-/obj/item/locked_box/armor/tier3_5,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhighcargo,
 /obj/item/grenade/f13/plasma,
+/obj/item/locked_box/armor/tier3_5,
+/obj/effect/spawner/lootdrop/f13/attachments,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -1401,9 +1401,6 @@
 	},
 /turf/open/floor/f13,
 /area/f13/bunker/bunkertwo)
-"jg" = (
-/turf/closed/mineral/strong/wasteland,
-/area/f13/bunker/bunkerthree)
 "ji" = (
 /obj/structure/bedsheetbin/towel,
 /obj/structure/table,
@@ -3263,6 +3260,8 @@
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier5,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
+/obj/effect/spawner/lootdrop/f13/cash_random_low,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker/bunkerthree)
 "vL" = (
@@ -4339,7 +4338,6 @@
 "Cp" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker/bunkerthree)
 "Cr" = (
@@ -4494,11 +4492,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
-"De" = (
-/obj/effect/decal/remains/human,
-/obj/effect/spawner/lootdrop/f13/cash_random_low,
-/turf/open/floor/plating/tunnel,
-/area/f13/bunker/bunkerthree)
 "Df" = (
 /obj/machinery/light{
 	dir = 4
@@ -25200,7 +25193,7 @@ ZA
 Rk
 ZA
 ZA
-jg
+Gk
 TF
 TF
 TF
@@ -25603,7 +25596,7 @@ Gk
 Ws
 Gk
 Cp
-De
+ut
 ZA
 TF
 TF
@@ -26410,7 +26403,7 @@ Gk
 Cb
 Ww
 Gk
-Gk
+ad
 Hx
 Gk
 TF
@@ -27217,8 +27210,8 @@ NS
 Gk
 SE
 MY
-Gk
 ad
+Fx
 qc
 Gk
 TF
@@ -27420,7 +27413,7 @@ Gk
 Hh
 ZA
 Gk
-an
+iv
 ZA
 Gk
 TF
@@ -27622,9 +27615,9 @@ Gk
 ZA
 ZA
 Gk
+ad
+an
 Gk
-ZA
-jg
 TF
 TF
 TF
