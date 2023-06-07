@@ -2892,6 +2892,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault)
+"sF" = (
+/obj/structure/girder/reinforced,
+/obj/structure/barricade/wooden/planks,
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelchess"
+	},
+/area/f13/bunker/bunkerthree)
 "sG" = (
 /obj/structure/chair/comfy/modern{
 	dir = 4
@@ -5862,6 +5869,12 @@
 /obj/item/shield/riot/bullet_proof,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/f13/vault/security/armory)
+"Ms" = (
+/obj/structure/sign/warning/securearea{
+	desc = "A warning sign which reads 'SECURE AREA - DO NOT ENTER UNDER ANY CIRCUMSTANCE. YOU HAVE BEEN WARNED'."
+	},
+/turf/closed/wall/rust,
+/area/f13/bunker/bunkerthree)
 "Mv" = (
 /obj/machinery/light{
 	dir = 4
@@ -26808,7 +26821,7 @@ MY
 Ww
 iv
 ht
-Ww
+sF
 ZA
 TF
 TF
@@ -27009,7 +27022,7 @@ Hx
 iv
 AS
 Gk
-Gk
+Ms
 BO
 Gk
 TF
@@ -27210,7 +27223,7 @@ NS
 Gk
 SE
 MY
-Gk
+Ms
 Fx
 qc
 Gk
