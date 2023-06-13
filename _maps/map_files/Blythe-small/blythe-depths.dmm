@@ -171,10 +171,8 @@
 	height = 2;
 	id = "chewchew"
 	},
-/turf/open/floor/f13{
-	color = "#d9c4b9";
-	icon_state = "darkrusty";
-	name = "dirty floor"
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelchess"
 	},
 /area/f13/bunker/bunkerthree)
 "bp" = (
@@ -398,10 +396,8 @@
 /area/f13/bunker/bunkertwo)
 "cs" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/f13{
-	color = "#d9c4b9";
-	icon_state = "darkrusty";
-	name = "dirty floor"
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelrusty"
 	},
 /area/f13/bunker/bunkerthree)
 "ct" = (
@@ -567,7 +563,11 @@
 /area/f13/bunker/bunkerthree)
 "do" = (
 /obj/structure/timeddoor,
-/turf/closed/mineral/random/low_chance,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
 /area/f13/bunker/bunkerthree)
 "dq" = (
 /obj/machinery/light{
@@ -2059,10 +2059,8 @@
 	light_color = "#c1caff"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13{
-	color = "#d9c4b9";
-	icon_state = "darkrusty";
-	name = "dirty floor"
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelchess"
 	},
 /area/f13/bunker/bunkerthree)
 "nu" = (
@@ -2487,7 +2485,9 @@
 /obj/effect/decal/waste{
 	icon_state = "goo8"
 	},
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew,
+/mob/living/simple_animal/hostile/securitron/sentrybot/chew{
+	emp_flags = list()
+	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -3080,7 +3080,6 @@
 /turf/open/water,
 /area/f13/bunker/bunkereight)
 "ub" = (
-/obj/structure/timeddoor,
 /obj/machinery/light/fo13colored/Red,
 /turf/closed/mineral/random/low_chance,
 /area/f13/bunker/bunkerthree)
@@ -4920,7 +4919,6 @@
 /area/f13/vault/overseer)
 "FV" = (
 /obj/structure/reagent_dispensers/barrel/four,
-/obj/structure/timeddoor,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker/bunkerthree)
 "FW" = (
@@ -6840,7 +6838,6 @@
 "Tl" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/timeddoor,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker/bunkerthree)
 "Tm" = (
@@ -6872,11 +6869,7 @@
 	},
 /obj/structure/barricade/wooden/planks,
 /obj/structure/barricade/wooden/strong,
-/turf/open/floor/f13{
-	color = "#d9c4b9";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
+/turf/open/floor/plating/tunnel,
 /area/f13/bunker/bunkerthree)
 "Tz" = (
 /turf/closed/indestructible/riveted,
@@ -25191,7 +25184,7 @@ ZA
 ZA
 ZA
 ZA
-do
+ZA
 Rk
 ZA
 ZA
@@ -25393,7 +25386,7 @@ ZA
 ZA
 ZA
 ZA
-do
+ZA
 Gk
 iT
 ix
@@ -25595,7 +25588,7 @@ XS
 ZA
 ZA
 ZA
-do
+ZA
 Gk
 ix
 ix
@@ -25797,7 +25790,7 @@ MM
 iv
 io
 ZA
-do
+ZA
 QW
 uI
 uI
@@ -25999,7 +25992,7 @@ DJ
 nH
 Bx
 ZA
-do
+ZA
 Gk
 ca
 zR
@@ -26201,7 +26194,7 @@ io
 XS
 ZA
 ZA
-do
+ZA
 Gk
 eN
 oq
@@ -26403,7 +26396,7 @@ YD
 ZA
 ZA
 ZA
-do
+ZA
 Gk
 lo
 oq
@@ -26605,7 +26598,7 @@ CF
 ZA
 ZA
 ZA
-do
+ZA
 Gk
 Gk
 XL
@@ -26807,7 +26800,7 @@ ZA
 ZA
 aX
 ZA
-do
+ZA
 QW
 de
 Dk
@@ -33887,10 +33880,10 @@ IU
 Vj
 IU
 Rk
-KS
-KS
-KS
-KS
+Rk
+Rk
+Rk
+Rk
 uv
 TF
 TF
@@ -34089,10 +34082,10 @@ IU
 cn
 zA
 Rk
-KS
+Rk
 rw
 nE
-KS
+Rk
 TF
 TF
 TF
@@ -34291,10 +34284,10 @@ IU
 Vj
 zr
 oF
-PW
+do
 PW
 nE
-KS
+Rk
 TF
 TF
 TF
@@ -34493,10 +34486,10 @@ Rk
 Rk
 Rk
 Rk
-KS
-KS
-KS
-KS
+Rk
+Rk
+Rk
+Rk
 uv
 TF
 TF
