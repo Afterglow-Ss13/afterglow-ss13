@@ -182,11 +182,6 @@ also: most hitscan weapons have more charge than their normal projectile counter
 	e_cost = 75 //20 shots
 	fire_sound = 'sound/f13weapons/RechargerFire.ogg'
 
-/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan/rifle
-	projectile_type = /obj/item/projectile/beam/laser/recharger/hitscan/rifle
-	e_cost = 150 //10 shots
-	fire_sound = 'sound/f13weapons/RechargerFire.ogg'
-
 /obj/item/ammo_casing/energy/laser/stun  //compliance regulator
 	projectile_type = /obj/item/projectile/beam/laser/pistol/hitscan/stun
 	e_cost = 100
@@ -304,15 +299,14 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/laser/aer12
 	projectile_type = /obj/item/projectile/beam/laser/aer12
-	e_cost = 200 //10 shots.
-	damage_threshold_penetration = 6 //Upgraded gun lets more damage through than a typical rifle.
+	e_cost = 100 //20 shots
 	fire_sound = 'sound/f13weapons/aer9fire.ogg'
 
 /obj/item/ammo_casing/energy/laser/aer12/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/aer12/hitscan
-	e_cost = 250 //8 shots.
+	e_cost = 80 //25 shots
 	fire_sound = 'sound/f13weapons/aer9fire.ogg'
-	damage_threshold_penetration = 10 //Overcharged AF, lets at minimum 1/3rd of the damage it puts out burn through armor.
+	damage_threshold_penetration = 6 //Upgraded gun lets more damage through than a typical rifle.
 
 /obj/item/ammo_casing/energy/gammagun
 	projectile_type = /obj/item/projectile/beam/gamma

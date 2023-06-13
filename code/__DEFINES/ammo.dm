@@ -8,8 +8,10 @@
 #define CALIBER_9MM "9mm rounds"
 #define CALIBER_10MM "10mm rounds"
 #define CALIBER_14MM "14mm rounds"
+#define CALIBER_38 ".38 special rounds"
 #define CALIBER_357 ".357 magnum rounds"
 #define CALIBER_44 ".44 magnum rounds"
+#define CALIBER_45LC ".45 LC rounds"
 #define CALIBER_45ACP ".45 ACP rounds"
 #define CALIBER_4570 ".45-70 rounds"
 #define CALIBER_50MG ".50MG rounds"
@@ -60,8 +62,10 @@
 	CALIBER_22LR,\
 	CALIBER_9MM,\
 	CALIBER_10MM,\
+	CALIBER_38,\
 	CALIBER_357,\
 	CALIBER_44,\
+	CALIBER_45LC,\
 	CALIBER_45ACP\
 	)
 
@@ -69,6 +73,7 @@
 	CALIBER_22LR,\
 	CALIBER_9MM,\
 	CALIBER_10MM,\
+	CALIBER_38,\
 	CALIBER_357,\
 	CALIBER_45ACP\
 	)
@@ -76,6 +81,7 @@
 #define KNUCKLEGUN_AMMO_CALIBERS list(\
 	CALIBER_9MM,\
 	CALIBER_10MM,\
+	CALIBER_38,\
 	CALIBER_357,\
 	CALIBER_44,\
 	CALIBER_45ACP\
@@ -84,7 +90,7 @@
 /// this is an awful, awful idea
 #define SHOTGUNBAT_AMMO_CALIBERS list(\
 	CALIBER_SHOTGUN,\
-	CALIBER_14MM\
+	CALIBER_50MG,\
 	)
 
 GLOBAL_LIST_INIT(pipe_rifle_valid_calibers, list(
@@ -94,10 +100,14 @@ GLOBAL_LIST_INIT(pipe_rifle_valid_calibers, list(
 	CALIBER_762,
 	CALIBER_9MM,
 	CALIBER_10MM,
+	CALIBER_14MM,
+	CALIBER_38,
 	CALIBER_357,
 	CALIBER_44,
+	CALIBER_45LC,
 	CALIBER_45ACP,
 	CALIBER_4570,
+	CALIBER_50MG,
 	CALIBER_40MM,
 	CALIBER_FOAM,
 	CALIBER_MUSKET_BALL,

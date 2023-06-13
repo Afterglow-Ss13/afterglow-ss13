@@ -4,7 +4,6 @@
 	. = ..()		// if . is false, we are dead.
 	if(stat == DEAD)
 		stop_sound_channel(CHANNEL_HEARTBEAT)
-		stop_sneaking()
 		handle_death()
 		rot()
 		. = FALSE

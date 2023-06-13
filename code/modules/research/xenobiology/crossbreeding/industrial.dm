@@ -140,6 +140,11 @@ Industrial extracts:
 	plasmarequired = 7
 	itempath = /obj/item/slimecrossbeaker/autoinjector/slimejelly
 
+/obj/item/slimecross/industrial/pink
+	colour = "pink"
+	plasmarequired = 6
+	itempath = /obj/item/slimecrossbeaker/autoinjector/peaceandlove
+
 /obj/item/slimecross/industrial/gold
 	colour = "gold"
 	plasmarequired = 10
