@@ -15,6 +15,7 @@
 
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
+#include "code\__byond_version_compat.dm"
 #include "code\_compile_options.dm"
 #include "code\world.dm"
 #include "code\__DEFINES\_auxtools.dm"
@@ -154,6 +155,7 @@
 #include "code\__DEFINES\dcs\signals.dm"
 #include "code\__DEFINES\dcs\signals\signals_atom_main.dm"
 #include "code\__DEFINES\dcs\signals\signals_atom_movable.dm"
+#include "code\__DEFINES\dcs\signals\signals_ladder.dm"
 #include "code\__DEFINES\dcs\signals\signals_light_eater.dm"
 #include "code\__DEFINES\dcs\signals\signals_moveloop.dm"
 #include "code\__DEFINES\dcs\signals\signals_movetype.dm"
@@ -3826,7 +3828,6 @@
 #include "modular_citadel\code\modules\reagents\chemistry\reagents\eigentstasium.dm"
 #include "modular_citadel\code\modules\reagents\chemistry\reagents\fermi_reagents.dm"
 #include "modular_citadel\code\modules\reagents\chemistry\reagents\healing.dm"
-#include "modular_citadel\code\modules\reagents\chemistry\reagents\MKUltra.dm"
 #include "modular_citadel\code\modules\reagents\chemistry\reagents\SDGF.dm"
 #include "modular_citadel\code\modules\reagents\chemistry\recipes\fermi.dm"
 #include "modular_citadel\code\modules\reagents\objects\clothes.dm"
