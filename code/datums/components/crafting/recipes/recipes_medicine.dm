@@ -111,27 +111,35 @@
 /datum/crafting_recipe/bitterdrink
 	name = "Bottle bitterdrink"
 	result = /obj/item/reagent_containers/pill/bitterdrink
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
-				/obj/item/reagent_containers/food/drinks/bottle = 1)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
+				/obj/item/reagent_containers/food/snacks/grown/agave = 1,
+				/obj/item/reagent_containers/food/snacks/grown/fungus = 1,
+				/obj/item/stack/sheet/leather = 1,
+				/datum/reagent/consumable/nuka_cola = 25,
+				/datum/reagent/radium = 5)
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = REGULAR_CHECK
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/bitterdrink5
 	name = "Batch of bitterdrink (x5)"
 	result = /obj/item/storage/box/medicine/bitterdrink5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
-				/obj/item/reagent_containers/food/drinks/bottle = 5)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 10,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 10,
+				/obj/item/reagent_containers/food/snacks/grown/agave = 5,
+				/obj/item/reagent_containers/food/snacks/grown/fungus = 5,
+				/obj/item/stack/sheet/leather = 5,
+				/datum/reagent/consumable/nuka_cola = 125,
+				/datum/reagent/radium = 25)
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 20
 	category = CAT_MEDICAL
 	always_available = FALSE
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = REGULAR_CHECK
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/healpoultice
 	name = "Healing poultice"
@@ -144,7 +152,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = EASY_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/healpoultice5
 	name = "Batch of healing poultice (x5)"
@@ -157,7 +165,7 @@
 	time = 20
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = EASY_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"

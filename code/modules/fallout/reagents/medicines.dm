@@ -1,40 +1,40 @@
 /* 
  * Stimpak Juice
- * Initial insta-heal
  * Some lingering heal over time
  * Heals either brute or burn per tick, whichever's higher
  * Overdose makes you barf stunlock yourself
  */
 /datum/reagent/medicine/stimpak	// Supplemented by other chems within a stimpak
-	name = "Stimfluid"
+	name = "Medicinal fluid"
 	description = "A cocktail of advanced medicines designed to rapidly heal wounds."
 	reagent_state = LIQUID
 	color = "#eb0000"
 	taste_description = "numbness"
 	metabolization_rate = 5 * REAGENTS_METABOLISM
-	overdose_threshold = 60
+	overdose_threshold = 30
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
 
 // insta-heal on inject, 1 of each brute and burn per volume
-/datum/reagent/medicine/stimpak/reaction_mob(mob/living/M, method=INJECT, reac_volume)
-	if(iscarbon(M))
-		if(M.stat == DEAD) // Doesnt work on the dead
-			return
-		if(method != INJECT) // Gotta be injected
-			return
-		if(M.getBruteLoss())
-			M.adjustBruteLoss(-reac_volume)
-		if(M.getFireLoss())
-			M.adjustFireLoss(-reac_volume)
-	..()
+
+///datum/reagent/medicine/stimpak/reaction_mob(mob/living/M, method=INJECT, reac_volume)
+//	if(iscarbon(M))
+//		if(M.stat == DEAD) // Doesnt work on the dead
+//			return
+//		if(method != INJECT) // Gotta be injected
+//			return
+//		if(M.getBruteLoss())
+//			M.adjustBruteLoss(-reac_volume)
+//		if(M.getFireLoss())
+//			M.adjustFireLoss(-reac_volume)
+//	..()
 
 // heals 1 damage of either brute or burn on life, whichever's higher
 /datum/reagent/medicine/stimpak/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
-		M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	else
-		M.adjustFireLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -47,7 +47,7 @@
 
 /* 
  * Super Stimpak Juice
- * Initial insta-heal
+ * Heals over time
  * Fixes up cuts like a weaker sanguirite
  * Overdose makes your heart die
  */
@@ -64,17 +64,17 @@
 	var/clot_rate = 0.10
 	var/clot_coeff_per_wound = 0.7
 
-/datum/reagent/medicine/super_stimpak/reaction_mob(mob/living/M, method=INJECT, reac_volume)
-	if(iscarbon(M))
-		if(M.stat == DEAD)
-			return
-		if(method != INJECT)
-			return
-		if(M.getBruteLoss())
-			M.adjustBruteLoss(-reac_volume)
-		if(M.getFireLoss())
-			M.adjustFireLoss(-reac_volume)
-	..()
+///datum/reagent/medicine/super_stimpak/reaction_mob(mob/living/M, method=INJECT, reac_volume)
+//	if(iscarbon(M))
+//		if(M.stat == DEAD)
+//			return
+//		if(method != INJECT)
+//			return
+//		if(M.getBruteLoss())
+//			M.adjustBruteLoss(-reac_volume)
+//		if(M.getFireLoss())
+//			M.adjustFireLoss(-reac_volume)
+//	..()
 
 /// Slows you down and tells you that your heart's gonna get wrecked if you keep taking more
 /datum/reagent/medicine/super_stimpak/on_mob_metabolize(mob/living/carbon/M) // Stim Sickness
@@ -90,6 +90,9 @@
 
 /// Seals up bleeds like a weaker sanguirite, doesnt do any passive heals though
 /datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M) // Heals fleshwounds like a weak sanguirite
+	M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustFireLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
 	..()
@@ -174,32 +177,32 @@
 	..()
 
 /* 
- * Healing Poultice
+ * Bitter drink
  * Heals both brute and burn
  * Seals up cuts
  * Overdose poisons you
  * Ghouls love it
  */
 
-/datum/reagent/medicine/healing_powder/poultice	// Handles superior healing of the poultice herbal mix, with its superior healing, wound recovery, and painful OD
-	name = "Healing poultice"
+/datum/reagent/medicine/healing_powder/bitterdrink	// Handles superior healing of bitter drinks, with its superior healing, wound recovery, and painful OD
+	name = "Bitter drink"
 	description = "Potent, stinging herbs that swiftly aid in the recovery of grevious wounds."
 	color = "#C8A5DC"
 	overdose_threshold = 12
 	var/clot_rate = 0.10
 	var/clot_coeff_per_wound = 0.7
 
-/datum/reagent/medicine/healing_powder/poultice/on_mob_metabolize(mob/living/carbon/M) // a painful remedy!
+/datum/reagent/medicine/healing_powder/bitterdrink/on_mob_metabolize(mob/living/carbon/M) // a painful remedy!
 	. = ..()
 	M.add_movespeed_modifier(/datum/movespeed_modifier/healing_poultice_slowdown)
-	to_chat(M, span_alert("You feel a burning pain spread through your skin, concentrating around your wounds."))
+	to_chat(M, span_alert("You taste an unbearable bitterness. It makes you feel sick."))
 
-/datum/reagent/medicine/healing_powder/poultice/on_mob_end_metabolize(mob/living/carbon/M)
+/datum/reagent/medicine/healing_powder/bitterdrink/on_mob_end_metabolize(mob/living/carbon/M)
 	. = ..()
 	M.remove_movespeed_modifier(/datum/movespeed_modifier/healing_poultice_slowdown)
-	to_chat(M, span_notice("The poultice's burning subsides."))
+	to_chat(M, span_notice("The bitter taste in your mouth subsides."))
 
-/datum/reagent/medicine/healing_powder/poultice/on_mob_life(mob/living/carbon/M)
+/datum/reagent/medicine/healing_powder/bitterdrink/on_mob_life(mob/living/carbon/M)
 	. = ..()
 	M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
 	M.adjustFireLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
@@ -209,14 +212,14 @@
 	..()
 
 
-/datum/reagent/medicine/healing_powder/poultice/overdose_process(mob/living/carbon/M)
+/datum/reagent/medicine/healing_powder/bitterdrink/overdose_process(mob/living/carbon/M)
 	M.adjustToxLoss(4)
 	if((M.getToxLoss() >= 30) && prob(8))
-		var/poultice_od_message = pick(
-			"Burning red streaks form on your skin.", 
-			"You feel a searing pain shoot through your skin.",
-			"You feel like your blood's been replaced with acid. It burns.")
-		to_chat(M, span_notice("[poultice_od_message]"))
+		var/bitterdrink_od_message = pick(
+			"You feel extremely sick.", 
+			"You feel a searing pain in your stomach.",
+			"You feel like your suffering from a gastrointestinal bleed. It burns.")
+		to_chat(M, span_notice("[bitterdrink_od_message]"))
 	. = TRUE
 	..()
 
