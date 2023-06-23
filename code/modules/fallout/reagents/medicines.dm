@@ -1,5 +1,5 @@
 /* 
- * Stimpak Juice
+ * Fallout 13 generic medicine, stimpak/poultice
  * Some lingering heal over time
  * Heals either brute or burn per tick, whichever's higher
  * Overdose makes you barf stunlock yourself
@@ -11,7 +11,7 @@
 	color = "#eb0000"
 	taste_description = "numbness"
 	metabolization_rate = 5 * REAGENTS_METABOLISM
-	overdose_threshold = 30
+	overdose_threshold = 50
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
 
@@ -32,9 +32,9 @@
 // heals 1 damage of either brute or burn on life, whichever's higher
 /datum/reagent/medicine/stimpak/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
-		M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
 	else
-		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -58,8 +58,8 @@
 	reagent_state = LIQUID
 	color = "#e50d0d"
 	taste_description = "numbness"
-	metabolization_rate = 3 * REAGENTS_METABOLISM	// 50 seconds, same as poultice
-	overdose_threshold = 40	// you can risk a second dose
+	metabolization_rate = 5 * REAGENTS_METABOLISM
+	overdose_threshold = 50
 	ghoulfriendly = TRUE
 	var/clot_rate = 0.10
 	var/clot_coeff_per_wound = 0.7
@@ -90,9 +90,9 @@
 
 /// Seals up bleeds like a weaker sanguirite, doesnt do any passive heals though
 /datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M) // Heals fleshwounds like a weak sanguirite
-	M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustFireLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustToxLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
 	..()
@@ -159,8 +159,8 @@
 	reagent_state = SOLID
 	color = "#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 1 * REAGENTS_METABOLISM	// same as bicaridine
-	overdose_threshold = 30
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	overdose_threshold = 25
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
@@ -188,7 +188,8 @@
 	name = "Bitter drink"
 	description = "Potent, stinging herbs that swiftly aid in the recovery of grevious wounds."
 	color = "#C8A5DC"
-	overdose_threshold = 12
+	overdose_threshold = 50
+	metabolization_rate = 5 * REAGENTS_METABOLISM
 	var/clot_rate = 0.10
 	var/clot_coeff_per_wound = 0.7
 
@@ -204,9 +205,9 @@
 
 /datum/reagent/medicine/healing_powder/bitterdrink/on_mob_life(mob/living/carbon/M)
 	. = ..()
-	M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustFireLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustToxLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
 	..()
