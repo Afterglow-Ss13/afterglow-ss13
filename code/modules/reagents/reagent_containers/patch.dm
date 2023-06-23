@@ -95,24 +95,24 @@
 // ---------------------------------
 // HEALING POULTICE
 
-/obj/item/reagent_containers/pill/patch/healpoultice // ~50hp over 20 seconds. Functionally identical to stimpaks.
+/obj/item/reagent_containers/pill/patch/healpoultice // Tribal stimpaks.
 	name = "Healing poultice"
 	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
-	list_reagents = list(/datum/reagent/medicine/stimpak = 20, /datum/reagent/medicine/healing_powder = 3, /datum/reagent/medicine/bicaridine = 3, /datum/reagent/medicine/kelotane = 3)
+	list_reagents = list(/datum/reagent/medicine/stimpak = 20, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
 	icon_state = "patch_healingpoultice"
 	self_delay = 0
 
 // ---------------------------------
 // BITTER DRINK
 
-/obj/item/reagent_containers/pill/bitterdrink // ~100hp over 50 seconds. Identical to super stimpaks, aside from using bitter drink instead of super stimfluid.
+/obj/item/reagent_containers/pill/bitterdrink // Tribal super stims.
 	name = "Healing poultice"
 	name = "Bitter drink"
 	desc = "A strong herbal healing concoction invented and created by the Twin Mothers tribe."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_bitterdrink"
-	list_reagents = list(/datum/reagent/medicine/healing_powder/bitterdrink = 10, /datum/reagent/medicine/stimpak = 20, /datum/reagent/medicine/healing_powder = 6, /datum/reagent/medicine/bicaridine = 6, /datum/reagent/medicine/kelotane = 6) 
+	list_reagents = list(/datum/reagent/medicine/healing_powder/bitterdrink = 20, /datum/reagent/medicine/stimpak = 20, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5) 
 	self_delay = 0
 
 // ---------------------------------
