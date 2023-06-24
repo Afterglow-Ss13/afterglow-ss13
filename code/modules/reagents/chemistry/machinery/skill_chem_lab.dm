@@ -24,46 +24,51 @@
 	var/list/possible_steps = list ("Heat", "Cool", "Add", "Mix")
 	var/list/dispensable_reagents = list()
 	var/list/basic_chemicals = list(
-		/datum/reagent/medicine/potass_iodide = 1,
-		/datum/reagent/medicine/styptic_powder = 3,
-		/datum/reagent/medicine/calomel = 3,
-		/datum/reagent/medicine/perfluorodecalin = 4,
-		/datum/reagent/medicine/bicaridine = 2,
-		/datum/reagent/medicine/kelotane = 2,
-		/datum/reagent/medicine/antitoxin = 2,
-		/datum/reagent/medicine/salglu_solution = 2,
-		/datum/reagent/radium = 1,
-		/datum/reagent/consumable/sugar = 3,
-		/datum/reagent/toxin/acid = 2,
-		/datum/reagent/fuel = 3,
-		/datum/reagent/stable_plasma = 1,
-		/datum/reagent/medicine/charcoal = 3,
-		/datum/reagent/consumable/ethanol = 2
+		/datum/reagent/hydrogen,
+		/datum/reagent/carbon,
+		/datum/reagent/nitrogen,
+		/datum/reagent/oxygen,
+		/datum/reagent/sodium,
+		/datum/reagent/aluminium,
+		/datum/reagent/silicon,
+		/datum/reagent/phosphorus,
+		/datum/reagent/sulfur,
+		/datum/reagent/chlorine,
+		/datum/reagent/potassium,
+		/datum/reagent/iron,
+		/datum/reagent/copper,
+		/datum/reagent/mercury,
+		/datum/reagent/radium,
+		/datum/reagent/water,
+		/datum/reagent/consumable/ethanol,
+		/datum/reagent/consumable/sugar,
+		/datum/reagent/fuel,
+		/datum/reagent/silver,
+		/datum/reagent/iodine,
+		/datum/reagent/bromine,
 	)
 	//These become available once upgraded.
 	var/list/advanced_chemicals = list(
-		/datum/reagent/medicine/haloperidol = 4,
-		/datum/reagent/medicine/corazone = 4,
-		/datum/reagent/medicine/stimpak = 5,
-		/datum/reagent/medicine/oxandrolone = 4,
-		/datum/reagent/medicine/salbutamol = 4,
-		/datum/reagent/medicine/sal_acid = 4,
-		/datum/reagent/medicine/pen_acid = 4,
-		/datum/reagent/medicine/morphine = 4,
-		/datum/reagent/medicine/oculine = 4,
-		/datum/reagent/medicine/mannitol = 4,
-		/datum/reagent/medicine/neurine = 5,
-		/datum/reagent/medicine/antihol = 4,
-		/datum/reagent/medicine/spaceacillin = 4
+		/datum/reagent/toxin/acid,
+		/datum/reagent/stable_plasma,
+		/datum/reagent/fluorine,
+		/datum/reagent/lithium,
+		/datum/reagent/oil,
+		/datum/reagent/ammonia,
+		/datum/reagent/ash
 	)
 
 	var/list/expert_chemicals = list(
-		/datum/reagent/medicine/medx = 6,
-		/datum/reagent/medicine/ephedrine = 6,
-		/datum/reagent/medicine/diphenhydramine = 6
+		/datum/reagent/acetone,
+		/datum/reagent/phenol,
+		/datum/reagent/diethylamine,
+		/datum/reagent/medicine/mine_salve,
+		/datum/reagent/toxin,
+		/datum/reagent/medicine/morphine
 	)
 
 	var/list/upgraded_chemicals = list(
+		/*
 		/datum/reagent/medicine/clonexadone = 3,
 		/datum/reagent/medicine/pyroxadone = 3,
 		/datum/reagent/medicine/pen_acid/pen_jelly = 3,
@@ -73,9 +78,11 @@
 		/datum/reagent/medicine/regen_jelly = 3,
 		/datum/reagent/medicine/epinephrine = 3,
 		/datum/reagent/medicine/spaceacillin = 2
+		*/
 	)
 
 	var/list/upgraded_chemicals2 = list(
+		/*
 		/datum/reagent/medicine/strange_reagent = 4,
 		/datum/reagent/drug/space_drugs = 3,
 		/datum/reagent/toxin/plasma = 2,
@@ -87,6 +94,7 @@
 		/datum/reagent/medicine/psicodine = 2,
 		/datum/reagent/medicine/mentat = 3,
 		/datum/reagent/medicine/stimpak = 3
+		*/
 	)
 
 /obj/machinery/chem_lab/Initialize()
