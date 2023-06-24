@@ -72,13 +72,13 @@
 // ---------------------------------
 // HEALING POWDER
 
-/obj/item/reagent_containers/pill/healingpowder // 50hp over 50 seconds.
+/obj/item/reagent_containers/pill/healingpowder // Heals 4 HP on life. Doesn't tell you when it's safe to take another dose like better medicines do.
 	name = "Healing powder"
 	desc = "A powder used to heal physical wounds derived from ground broc flowers and xander roots, commonly used by tribals."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_healingpowder"
-	list_reagents = list(/datum/reagent/medicine/healing_powder = 10)
-	self_delay = 1
+	list_reagents = list(/datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 10, /datum/reagent/medicine/kelotane = 10)
+	self_delay = 0
 
 // ---------------------------------
 // CUSTOM POWDER
@@ -89,30 +89,30 @@
 	list_reagents = null
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_healingpowder"
-	self_delay = 2
+	self_delay = 0
 	color = COLOR_PALE_GREEN_GRAY
 
 // ---------------------------------
 // HEALING POULTICE
 
-/obj/item/reagent_containers/pill/patch/healpoultice // 100hp over 50 seconds. a bit more potent than just bitters.
+/obj/item/reagent_containers/pill/patch/healpoultice // Tribal stimpaks.
 	name = "Healing poultice"
 	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
-	list_reagents = list(/datum/reagent/medicine/healing_powder/poultice = 10, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
+	list_reagents = list(/datum/reagent/medicine/stimpak = 15, /datum/reagent/medicine/healing_powder = 15, /datum/reagent/medicine/bicaridine = 15, /datum/reagent/medicine/kelotane = 15)
 	icon_state = "patch_healingpoultice"
-	self_delay = 1
+	self_delay = 0
 
 // ---------------------------------
 // BITTER DRINK
 
-/obj/item/reagent_containers/pill/bitterdrink // 50hp over 25 seconds
+/obj/item/reagent_containers/pill/bitterdrink // Tribal super stims.
 	name = "Bitter drink"
 	desc = "A strong herbal healing concoction invented and created by the Twin Mothers tribe."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_bitterdrink"
-	list_reagents = list(/datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5) 
-	self_delay = 1
+	list_reagents = list(/datum/reagent/medicine/super_stimpak = 10, /datum/reagent/medicine/stimpak = 10, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 10, /datum/reagent/medicine/kelotane = 10) 
+	self_delay = 0
 
 // ---------------------------------
 // HYDRA - never a thing, make it something. Sprites done.

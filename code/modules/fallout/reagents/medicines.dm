@@ -1,22 +1,22 @@
 /* 
- * Stimpak Juice
- * Initial insta-heal
+ * Generic fallout13 medicine
  * Some lingering heal over time
  * Heals either brute or burn per tick, whichever's higher
  * Overdose makes you barf stunlock yourself
  */
 /datum/reagent/medicine/stimpak	// Supplemented by other chems within a stimpak
-	name = "Stimfluid"
+	name = "Medicinal fluid"
 	description = "A cocktail of advanced medicines designed to rapidly heal wounds."
 	reagent_state = LIQUID
 	color = "#eb0000"
 	taste_description = "numbness"
-	metabolization_rate = 5 * REAGENTS_METABOLISM
-	overdose_threshold = 60
+	metabolization_rate = 1 * REAGENTS_METABOLISM
+	overdose_threshold = 30
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
 
 // insta-heal on inject, 1 of each brute and burn per volume
+/*
 /datum/reagent/medicine/stimpak/reaction_mob(mob/living/M, method=INJECT, reac_volume)
 	if(iscarbon(M))
 		if(M.stat == DEAD) // Doesnt work on the dead
@@ -28,13 +28,18 @@
 		if(M.getFireLoss())
 			M.adjustFireLoss(-reac_volume)
 	..()
+*/
 
-// heals 1 damage of either brute or burn on life, whichever's higher
+/datum/reagent/medicine/stimpak/on_mob_end_metabolize(mob/living/carbon/M) //Informs you that you are no longer healing
+	. = ..()
+	to_chat(M, span_notice("You feel clean of your medicine's effects."))
+
+// heals 2 damage of either brute or burn on life, whichever's higher
 /datum/reagent/medicine/stimpak/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
-		M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	else
-		M.adjustFireLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -46,24 +51,25 @@
 	. = TRUE
 
 /* 
- * Super Stimpak Juice
+ * Generic fallout13 advanced medicine
  * Initial insta-heal
  * Fixes up cuts like a weaker sanguirite
  * Overdose makes your heart die
  */
 
 /datum/reagent/medicine/super_stimpak // Handles superior healing of the super stim cocktail, plus its wound recovery, stim sickness, and dangerous OD.
-	name = "super stimfluid"
+	name = "advanced medicinal fluid"
 	description = "Advanced, potent healing chemicals."
 	reagent_state = LIQUID
 	color = "#e50d0d"
 	taste_description = "numbness"
-	metabolization_rate = 3 * REAGENTS_METABOLISM	// 50 seconds, same as poultice
-	overdose_threshold = 40	// you can risk a second dose
+	metabolization_rate = 1 * REAGENTS_METABOLISM	// 50 seconds, same as poultice
+	overdose_threshold = 30	// you can risk a second dose
 	ghoulfriendly = TRUE
 	var/clot_rate = 0.10
 	var/clot_coeff_per_wound = 0.7
 
+/*
 /datum/reagent/medicine/super_stimpak/reaction_mob(mob/living/M, method=INJECT, reac_volume)
 	if(iscarbon(M))
 		if(M.stat == DEAD)
@@ -75,6 +81,7 @@
 		if(M.getFireLoss())
 			M.adjustFireLoss(-reac_volume)
 	..()
+*/
 
 /// Slows you down and tells you that your heart's gonna get wrecked if you keep taking more
 /datum/reagent/medicine/super_stimpak/on_mob_metabolize(mob/living/carbon/M) // Stim Sickness
@@ -88,8 +95,12 @@
 	M.remove_movespeed_modifier(/datum/movespeed_modifier/super_stimpak_slowdown)
 	to_chat(M, span_notice("Your heart slows to a more reasonable pace, and your aching muscular fatigue fades.")) // tells you when it's safe to take another dose
 
-/// Seals up bleeds like a weaker sanguirite, doesnt do any passive heals though
-/datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M) // Heals fleshwounds like a weak sanguirite
+// Heal 2 damage of brute, burn and tox on life. Seals wounds.
+/datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M)
+	. = ..()
+	M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
 	..()
@@ -156,15 +167,15 @@
 	reagent_state = SOLID
 	color = "#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 2 * REAGENTS_METABOLISM	// same as bicaridine
+	metabolization_rate = 1 * REAGENTS_METABOLISM	// same as bicaridine
 	overdose_threshold = 30
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
-		M.adjustBruteLoss(-4*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	else
-		M.adjustFireLoss(-4*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -181,6 +192,7 @@
  * Ghouls love it
  */
 
+/*
 /datum/reagent/medicine/healing_powder/poultice	// Handles superior healing of the poultice herbal mix, with its superior healing, wound recovery, and painful OD
 	name = "Healing poultice"
 	description = "Potent, stinging herbs that swiftly aid in the recovery of grevious wounds."
@@ -219,6 +231,7 @@
 		to_chat(M, span_notice("[poultice_od_message]"))
 	. = TRUE
 	..()
+*/
 
 
 // ---------------------------

@@ -152,16 +152,16 @@
 // FALLOUT HYPOS //
 ///////////////////
 
-/obj/item/reagent_containers/hypospray/medipen/stimpak // 20hp instantly, plus 30hp over 20 seconds. stims in fallout contain a whole cocktail of chems, and this mix prevents them from stacking with healing powder and bitter drink.
+/obj/item/reagent_containers/hypospray/medipen/stimpak //Heals 6 HP on life.
 	name = "stimpak"
 	desc = "A handheld delivery system for medicine, used to rapidly heal physical damage to the body."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "hypo_stimpak"
 	custom_price = PRICE_STIMPAK
-	volume = 26
-	amount_per_transfer_from_this = 26
+	volume = 60
+	amount_per_transfer_from_this = 60
 	reagent_flags = DRAWABLE
-	list_reagents = list(/datum/reagent/medicine/stimpak = 20, /datum/reagent/medicine/healing_powder = 2, /datum/reagent/medicine/bicaridine = 2, /datum/reagent/medicine/kelotane = 2)
+	list_reagents = list(/datum/reagent/medicine/stimpak = 15, /datum/reagent/medicine/healing_powder = 15, /datum/reagent/medicine/bicaridine = 15, /datum/reagent/medicine/kelotane = 15)
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/on_reagent_change(changetype)
 	update_icon()
@@ -195,14 +195,14 @@
 // ---------------------------------
 // SUPER STIMPAK
 
-/obj/item/reagent_containers/hypospray/medipen/stimpak/super // 50hp instantly, plus 50hp over 20 seconds.
+/obj/item/reagent_containers/hypospray/medipen/stimpak/super // Heals 8 HP on life and closes wounds. Slows you down in the meantime.
 	name = "super stimpak"
 	desc = "The super version comes in a hypodermic, but with an additional vial containing more powerful drugs than the basic model and a leather belt to strap the needle to the injured limb."
 	icon_state = "hypo_superstimpak"
 	custom_price = PRICE_SUPER_STIM
-	volume = 62
-	amount_per_transfer_from_this = 62
-	list_reagents = list(/datum/reagent/medicine/super_stimpak = 30, /datum/reagent/medicine/stimpak = 20, /datum/reagent/medicine/healing_powder = 4, /datum/reagent/medicine/bicaridine = 4, /datum/reagent/medicine/kelotane = 4)
+	volume = 50
+	amount_per_transfer_from_this = 50
+	list_reagents = list(/datum/reagent/medicine/super_stimpak = 10, /datum/reagent/medicine/stimpak = 10, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 10, /datum/reagent/medicine/kelotane = 10)
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super/custom
 	desc = "The super version comes in a hypodermic, but with an additional vial to inject more drugs than the basic model and a leather belt to strap the needle to a limb. This particular one will deliver a tailored cocktail."
