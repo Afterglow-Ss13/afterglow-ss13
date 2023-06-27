@@ -27,6 +27,7 @@
 #define CALIBER_MUSKET_PLASMA "plasma musket packs"
 #define CALIBER_NEEDLE "needles"
 #define CALIBER_ROCKET "rockets"
+#define CALIBER_MININUKE "mininukes"
 #define CALIBER_SPEAR "speargun rounds"
 #define CALIBER_LASERGATLING "laser gatling charges"
 #define CALIBER_LASER "oldlasers"

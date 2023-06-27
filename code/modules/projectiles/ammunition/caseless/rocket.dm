@@ -38,3 +38,9 @@
 	caliber = CALIBER_75
 	icon_state = "s-casing-live"
 	projectile_type = /obj/item/projectile/bullet/gyro
+
+/obj/item/ammo_casing/caseless/mininuke
+	name = "\improper Mininuke"
+	desc = "That's a mininuke. it's more of a tactical demolition weapon than antipersonal, but when has that ever stopped anyone?"
+	icon_state = "nuclear"
+	projectile_type = /obj/item/projectile/bullet/mininuke
