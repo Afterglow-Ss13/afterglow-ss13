@@ -908,7 +908,7 @@
 /obj/item/clothing/head/hooded/winterhood/durathread
 	desc = "The one coat to rule them all. Extremely durable while providing the utmost comfort."
 	icon_state = "winterhood_durathread"
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1)
 
 /obj/item/clothing/suit/spookyghost
 	name = "spooky ghost"
