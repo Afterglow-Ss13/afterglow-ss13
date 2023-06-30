@@ -6381,12 +6381,6 @@
 /obj/structure/reagent_dispensers/barrel/explosive,
 /turf/open/floor/plasteel/dark,
 /area/f13/ambientlighting/building/m)
-"fgO" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/transparent/openspace,
-/area/f13/vault/reactor)
 "fhb" = (
 /obj/structure/closet/crate/bin,
 /obj/effect/decal/cleanable/dirt,
@@ -6521,10 +6515,6 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/ncr)
-"flM" = (
-/obj/machinery/light/fo13colored/Red,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "flT" = (
 /obj/structure/decoration/warning,
 /turf/closed/wall/r_wall,
@@ -6541,12 +6531,6 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/citycaves)
-"fnH" = (
-/obj/machinery/door/airlock/mining{
-	req_access_txt = "126"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/purple,
-/area/f13/vault/reactor)
 "fnJ" = (
 /obj/structure/sign/poster/prewar/poster94{
 	icon_state = "poster69"
@@ -6594,13 +6578,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/f13/tcoms)
-"fqW" = (
-/obj/structure/ore_box,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/purple,
-/area/f13/vault/reactor)
 "fra" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
@@ -6724,10 +6701,6 @@
 /obj/structure/nest/raider,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
-"fvF" = (
-/obj/structure/ore_box,
-/turf/open/floor/plasteel/f13/vault_floor/purple,
-/area/f13/vault/reactor)
 "fwf" = (
 /obj/effect/decal/waste{
 	icon_state = "goo8"
@@ -6748,23 +6721,6 @@
 /obj/structure/barricade/bars,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
-"fwZ" = (
-/obj/item/storage/bag/ore,
-/obj/item/storage/bag/ore,
-/obj/item/pickaxe/drill,
-/obj/item/t_scanner/adv_mining_scanner/lesser,
-/obj/structure/rack/shelf_metal,
-/obj/item/storage/belt/utility/mining/alt,
-/obj/item/clothing/shoes/workboots/mining,
-/obj/item/flashlight/lantern,
-/turf/open/floor/plasteel/f13/vault_floor/purple,
-/area/f13/vault/reactor)
-"fxb" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/plasteel/f13/vault_floor/purple,
-/area/f13/vault/reactor)
 "fxc" = (
 /mob/living/simple_animal/hostile/raider/ranged/biker{
 	name = "Tunnel Torturers Raider"
@@ -6947,10 +6903,6 @@
 /obj/structure/chair/sofa/corp/right,
 /turf/open/floor/carpet/royalblack,
 /area/f13/brotherhood/leisure)
-"fBr" = (
-/obj/machinery/suit_storage_unit/mining,
-/turf/open/floor/plasteel/f13/vault_floor/purple,
-/area/f13/vault/reactor)
 "fBE" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /turf/open/floor/plating/f13/inside/gravel,
@@ -10123,12 +10075,6 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/brotherhood/operations)
-"hXN" = (
-/obj/structure/sign/mining/survival,
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault/reactor)
 "hYf" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1{
 	icon_state = "casino"
@@ -19602,13 +19548,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/bunker/bunkertwo)
-"ptj" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/machinery/mineral/equipment_vendor,
-/turf/open/floor/plasteel/f13/vault_floor/purple,
-/area/f13/vault/reactor)
 "ptx" = (
 /obj/structure/sink{
 	dir = 8;
@@ -20246,9 +20185,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/building/sewers)
-"pRn" = (
-/turf/open/transparent/openspace,
-/area/f13/vault/reactor)
 "pRO" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 8
@@ -27214,11 +27150,6 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/bunker/bunkernine)
-"uQf" = (
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault/reactor)
 "uQs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/ladder,
@@ -31518,9 +31449,6 @@
 /obj/item/wrench/power,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/bunker/bunkerseven)
-"ybg" = (
-/turf/open/floor/plasteel/f13/vault_floor/purple,
-/area/f13/vault/reactor)
 "ybi" = (
 /obj/structure/chair/office,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -47219,12 +47147,12 @@ vSF
 vSF
 vSF
 vSF
-uQf
-uQf
-uQf
-uQf
-uQf
-uQf
+cds
+cds
+cds
+cds
+cds
+cds
 uOZ
 uOZ
 uOZ
@@ -47421,12 +47349,12 @@ vSF
 vSF
 vSF
 vSF
-uQf
-fqW
-ybg
-ybg
-pRn
-uQf
+cds
+cds
+cds
+cds
+cds
+cds
 uOZ
 uOZ
 uOZ
@@ -47622,13 +47550,13 @@ cds
 cds
 vSF
 vSF
-flM
-hXN
-fvF
-ybg
-ybg
-fgO
-uQf
+vSF
+cds
+cds
+cds
+cds
+cds
+cds
 uOZ
 uOZ
 uOZ
@@ -47825,12 +47753,12 @@ cds
 vSF
 vSF
 vSF
-fnH
-ybg
-ybg
-ybg
-ptj
-uQf
+cds
+cds
+cds
+cds
+cds
+cds
 uOZ
 uOZ
 uOZ
@@ -48026,13 +47954,13 @@ vSF
 vSF
 vSF
 vSF
-flM
-uQf
-fwZ
-ybg
-ybg
-fBr
-uQf
+vSF
+cds
+cds
+cds
+cds
+cds
+cds
 uOZ
 uOZ
 uOZ
@@ -48229,12 +48157,12 @@ cds
 vSF
 vSF
 vSF
-uQf
-fwZ
-ybg
-fxb
-fBr
-uQf
+cds
+cds
+cds
+cds
+cds
+cds
 uOZ
 uOZ
 uOZ
@@ -48431,12 +48359,12 @@ vSF
 vSF
 vSF
 vSF
-uQf
-uQf
-uQf
-uQf
-uQf
-uQf
+cds
+cds
+cds
+cds
+cds
+cds
 uOZ
 uOZ
 uOZ
@@ -48633,11 +48561,11 @@ cds
 vSF
 vSF
 tBT
-tBT
-tBT
-tBT
-tBT
-tBT
+cds
+cds
+cds
+cds
+cds
 tBT
 uOZ
 uOZ
