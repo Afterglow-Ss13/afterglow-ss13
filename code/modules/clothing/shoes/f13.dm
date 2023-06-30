@@ -78,7 +78,7 @@
 	item_state = "military"
 	permeability_coefficient = 0.05
 	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T3, ARMOR_MODIFIER_DOWN_LASER_T1)
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T3)
 	strip_delay = 40
 	resistance_flags = NONE
 	can_be_tied = FALSE
@@ -169,7 +169,7 @@
 	icon_state = "legion_legate"
 	item_state = "legion_legate"
 	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T3 )
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1 )
 
 // ---------------------------------------------------------
 // Great Khan boots
