@@ -460,6 +460,7 @@
 	icon = 'icons/fallout/objects/powercells.dmi'
 	icon_state = "mfc-full"
 	maxcharge = 2000
+	cancharge = 0
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/stock_parts/cell/ammo/mfc/update_icon()
@@ -486,6 +487,7 @@
 	icon = 'icons/fallout/objects/powercells.dmi'
 	icon_state = "ec-full"
 	maxcharge = 1500
+	cancharge = 0
 	
 
 // Microfusion breeder? Okay, sure.
@@ -494,6 +496,7 @@
 	desc = "A miniature microfusion reactor connected to capacitor banks. This is not a removable part, you messed up."
 	icon = 'icons/fallout/objects/powercells.dmi'
 	icon_state = "ec-full"
+	cancharge = 0
 	maxcharge = 2000
 
 /obj/item/stock_parts/cell/ammo/ec/update_icon()
@@ -515,6 +518,7 @@
 	icon = 'icons/fallout/objects/powercells.dmi'
 	icon_state = "ecp-full"
 	maxcharge = 2400
+	cancharge = 0
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/stock_parts/cell/ammo/ecp/update_icon()
