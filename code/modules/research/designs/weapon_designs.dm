@@ -230,6 +230,7 @@
 	category = list("Firing Pins")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY | DEPARTMENTAL_FLAG_SCIENCE
 
+/*
 /datum/design/pin_mindshield
 	name = "Mindshield Firing Pin"
 	desc = "This is a security firing pin which only authorizes users who are mindshield-implanted."
@@ -239,7 +240,7 @@
 	build_path = /obj/item/firing_pin/implant/mindshield
 	category = list("Firing Pins")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
+*/
 /datum/design/pin_explorer
 	name = "Outback Firing Pin"
 	desc = "This firing pin only shoots while ya ain't on station, fair dinkum!"
@@ -678,7 +679,7 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 */
-
+/*
 /datum/design/mindshield
 	name = "Mindshield Implant"
 	desc = "A mindshield implant."
@@ -688,7 +689,7 @@
 	build_path = /obj/item/implantcase/mindshield
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
+*/
 /datum/design/mfc
 	name = "Microfusion Cell"
 	id = "mfc"
