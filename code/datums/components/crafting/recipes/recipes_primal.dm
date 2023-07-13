@@ -377,8 +377,9 @@
 	name = "Ion-Spirit Arrow"
 	result = /obj/item/ammo_casing/caseless/arrow/ion
 	time = 30
-	reqs = list(/obj/item/stack/crafting/electronicparts = 3,
-				/obj/item/stack/rods = 2)
+	reqs = list(/obj/item/stock_parts/cell/ammo/mfc = 1,
+				/obj/item/stack/cable_coil = 2,
+				/obj/item/stack/rods = 1)
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
 

@@ -723,6 +723,11 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/lever_action)
 
+/obj/item/book/granter/crafting_recipe/blueprint/empgrenade
+	name = "EMP grenade blueprint"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/empgrenade)
+
 /obj/item/book/granter/crafting_recipe/blueprint/trailcarbine
 	name = "trail carbine blueprint"
 	icon_state = "blueprint2"

@@ -1671,8 +1671,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	loot = list(
 				/obj/item/grenade/f13/frag = 30,
 				/obj/item/grenade/flashbang,
-				/obj/item/grenade/f13/stinger,
-				/obj/item/grenade/empgrenade = 50
+				/obj/item/grenade/f13/stinger
 				)
 
 /obj/effect/spawner/lootdrop/f13/bomb/tier3
@@ -2143,6 +2142,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 	loot = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/leveraction,
+		/obj/item/book/granter/crafting_recipe/blueprint/empgrenade,
 		/obj/item/book/granter/crafting_recipe/blueprint/r91,
 		/obj/item/book/granter/crafting_recipe/blueprint/r84,
 		/obj/item/book/granter/crafting_recipe/blueprint/deagle,

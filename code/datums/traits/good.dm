@@ -21,7 +21,6 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	/datum/crafting_recipe/incendiary,
 	/datum/crafting_recipe/concussion,
 	/datum/crafting_recipe/radgrenade,
-	/datum/crafting_recipe/empgrenade,
 	/datum/crafting_recipe/incendiaryrocket,
 	/datum/crafting_recipe/strongrocket))
 
