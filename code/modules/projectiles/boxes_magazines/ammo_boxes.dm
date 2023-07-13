@@ -843,6 +843,16 @@
 	ammo_type = /obj/item/ammo_casing/a50MG/penetrator
 	icon_state = "50ap"
 
+/obj/item/ammo_box/plasmacart
+	name = "Box of Plasma Cartridges"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "plasmusketbox"
+	multiple_sprites = 2
+	ammo_type = /obj/item/ammo_casing/caseless/plasmacart
+	max_ammo = 10
+	caliber = list(CALIBER_PLASMA_CARTRIDGE)
+	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
+	w_class = WEIGHT_CLASS_SMALL
 /*
 /obj/item/ammo_box/a50MG/uraniumtipped
 	name = "anti-materiel uranium-tipped ammo rack (.50MG)"

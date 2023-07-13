@@ -22,6 +22,15 @@
 	variance = 0.5
 	click_cooldown_override = 1
 
+/obj/item/ammo_casing/caseless/plasmacart
+	name = "plasma cartridge"
+	desc = "A cartridge filled with exotic looking radioactive particles that conveniently looks like green goo."
+	caliber = CALIBER_PLASMA_CARTRIDGE
+	icon_state = "plasmacan"
+	projectile_type = /obj/item/projectile/plasmacarbine
+	fire_sound = 'sound/f13weapons/plasmaf4.ogg'
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/energy
+
 /obj/item/ammo_casing/caseless/flamethrower
 	name = "napalm"
 	desc = "a bunch of napalm fuel for a flamethrower. A bit useless now that it's been spilt on the ground."

@@ -1230,6 +1230,21 @@
 				/obj/item/stock_parts/cell/ammo/ec
 	)
 
+/obj/effect/spawner/bundle/f13/f4plasma
+	name = "fallout 4 plasma gun spawner (no ammo)"
+	items = list(
+				/obj/item/gun/ballistic/revolver/F4plasma,
+	)
+
+/obj/effect/spawner/bundle/f13/f4plasma/ammo
+	name = "fallout 4 plasma gun spawner (with ammo)"
+	items = list(
+				/obj/item/gun/ballistic/revolver/F4plasma,
+				/obj/item/ammo_box/plasmacart,
+				/obj/item/ammo_box/plasmacart,
+	)
+
+
 /obj/effect/spawner/bundle/f13/needler
 	name = "needler and ammo spawner"
 	items = list(

@@ -570,11 +570,11 @@
 	damage = 50 //2-hit KO, 3 with armor, 4 with good armor
 	wound_bonus = 51 //just to get that one over a plasma rifle
 
-/obj/item/projectile/plasmacarbine //Plasma carbine
+/obj/item/projectile/plasmacarbine //urban plasma rifle
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 40
+	damage = 45
 	flag = "energy" //checks vs. energy protection
 	wound_bonus = 50 //let's not make the carbine horrifying // nah lets make it horrifying
 	eyeblur = 0
@@ -607,7 +607,7 @@
 
 /obj/item/projectile/f13plasma/pistol //Plasma pistol
 	damage = 35
-	wound_bonus = 70 //being hit with plasma is horrific
+	wound_bonus = 40 //being hit with plasma is horrific
 
 /obj/item/projectile/f13plasma/pistol/eve //Eve
 	icon = 'icons/fallout/objects/guns/projectiles.dmi'
@@ -629,9 +629,6 @@
 	damage = 55
 	wound_bonus = 35 //Adam is stronger, but not in the wounding department.
 	light_color = LIGHT_COLOR_RED
-
-/obj/item/projectile/f13plasma/pistol/worn
-	damage = 30
 
 /obj/item/projectile/f13plasma/pistol/glock //Glock (streamlined plasma pistol)
 	damage = 40

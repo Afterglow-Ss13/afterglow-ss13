@@ -29,6 +29,7 @@
 #define CALIBER_SPEAR "speargun rounds"
 #define CALIBER_LASERGATLING "laser gatling charges"
 #define CALIBER_LASER "oldlasers"
+#define CALIBER_PLASMA_CARTRIDGE "plasma cartridges"
 #define CALIBER_MWS "mwses"
 #define CALIBER_ARROW "arrows"
 #define CALIBER_FUEL "flamer fuel"
