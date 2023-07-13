@@ -1,6 +1,6 @@
 /*
 Vault access doors
-Overseer/Chief of security: 19 ACCESS_HEADS
+Vault Coordinator/Chief of security: 19 ACCESS_HEADS
 Security: 1 ACCESS_SECURITY
 General access: 31 ACCESS_CARGO
 Engineering: 10, 11 ACCESS_ENGINE_EQUIP, ACCESS_ENGINE
@@ -25,14 +25,14 @@ Science: 47 ACCESS_RESEARCH
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /*
-Overseer
+Vault Coordinator
 */
 
 /datum/job/vault
 	objectivesList = list("Leadership recommends the following goal for this week: Establish trade with the wasteland","Leadership recommends the following goal for this week: Acquire blueprints and interesting artifacts for research", "Leadership recommends the following goal for this week: Expand operations outside the vault")
 
 /datum/job/vault/f13overseer
-	title = "Overseer"
+	title = "Vault Coordinator"
 	flag = F13OVERSEER
 	head_announce = list("Security")
 	total_positions = 1 //was 1-1
@@ -54,7 +54,7 @@ Overseer
 	return get_all_accesses()
 
 /datum/outfit/job/vault/f13overseer
-	name = "Overseer"
+	name = "Vault Coordinator"
 	jobtype = /datum/job/vault/f13overseer
 
 	implants = list(/obj/item/implant/mindshield)
@@ -81,7 +81,7 @@ Head of Security
 /datum/job/vault/f13hos
 	title = "Chief of Security"
 	flag = F13HOS
-	department_head = list("Overseer")
+	department_head = list("Vault Coordinator")
 	department_flag = VAULT
 	head_announce = list("Security")
 	total_positions = 1 //was 1-1
@@ -95,6 +95,11 @@ Head of Security
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/vault/f13hos
+
+	loadout_options = list(
+			/datum/outfit/loadout/sec_riot_suppression,
+			/datum/outfit/loadout/sec_daily_duty
+		)
 
 	access = list(ACCESS_VAULT_F13, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS,ACCESS_FORENSICS_LOCKERS,
 						ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL,
@@ -129,13 +134,29 @@ Head of Security
 
 	implants = list(/obj/item/implant/mindshield)
 
+/datum/outfit/loadout/sec_riot_suppression
+	name = "Riot Suppression"
+	suit = /obj/item/clothing/suit/armor/power_armor/vaulttec
+	head = /obj/item/clothing/head/helmet/f13/power_armor/vaulttec
+	backpack_contents = list(
+		/obj/item/book/granter/trait/pa_wear = 1
+	)
+
+/datum/outfit/loadout/sec_daily_duty
+	name = "Daily Duty"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/combat = 1,
+		/obj/item/ammo_box/magazine/tommygunm45/stick = 3,
+		/obj/item/grenade/flashbang = 2
+	)
+
 /*
 Medical Doctor
 */
 /datum/job/vault/f13doctor
 	title = "Vault-tec Doctor"
 	flag = F13DOCTOR
-	department_head = list("Overseer")
+	department_head = list("Vault Coordinator")
 	total_positions = 3 //was 5-4
 	spawn_positions = 3
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
@@ -180,13 +201,13 @@ Scientist
 /datum/job/vault/f13vaultscientist
 	title = "Vault-tec Scientist"
 	flag = F13VAULTSCIENTIST
-	department_head = list("Overseer")
+	department_head = list("Vault Coordinator")
 	total_positions = 3 //was 5-5
 	spawn_positions = 3
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer. You are tasked with researching new technologies, conducting mining expeditions (with the approval of Security or the Overseer), and upgrading the machinery of the Vault."
-	supervisors = "the Overseer"
+	supervisors = "the Vault Coordinator"
 	selection_color = "#ddffdd"
 
 	outfit = /datum/outfit/job/vault/f13vaultscientist
@@ -215,14 +236,64 @@ Scientist
 	//ADD_TRAIT(H, TRAIT_SURGERY_MID, src) //they need this for dissections
 
 /*
+Security Specialist
+*/
+
+/datum/job/vault/f13specialistofficer
+	title = "Vault-tec Security Specialist"
+	flag = F13SPECIALISTOFFICER
+	department_head = list("Chief of Security")
+	total_positions = 1
+	spawn_positions = 1
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
+	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
+	supervisors = "the head of security"
+	selection_color = "#ddffdd"
+	exp_requirements = 600
+
+	outfit = /datum/outfit/job/vault/f13security
+
+	access = list(ACCESS_VAULT_F13, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS,ACCESS_FORENSICS_LOCKERS,
+						ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL,
+						ACCESS_CARGO, ACCESS_MINERAL_STOREROOM)
+	minimal_access = list(ACCESS_VAULT_F13, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS,
+						ACCESS_MORGUE, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CARGO,
+						ACCESS_MINERAL_STOREROOM)
+
+	loadout_options = list(
+		/datum/outfit/loadout/sec_riot_suppression,
+		/datum/outfit/loadout/sec_combat_medic,
+		/datum/outfit/loadout/sec_fire_support
+	)
+
+/datum/outfit/loadout/sec_combat_medic
+	name = "Combat Medic"
+	belt =/obj/item/defibrillator/compact
+	glasses = /obj/item/clothing/glasses/hud/health
+	backpack_contents = list(
+		/obj/item/clothing/gloves/color/latex/nitrile = 1,
+		/obj/item/storage/survivalkit/medical = 1,
+		/obj/item/storage/box/medicine/stimpaks/stimpaks5 = 1
+		)
+
+/datum/outfit/loadout/sec_fire_support
+	name = "Fire Support"
+	mask = /obj/item/clothing/mask/gas/sechailer
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/aer9 = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 2
+		)
+
+/*
 Security Officer
 */
 /datum/job/vault/f13officer
 	title = "Vault-tec Security"
 	flag = F13OFFICER
 	department_head = list("Chief of Security")
-	total_positions = 5 //was 5-5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	spawn_positions = 4 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
+	total_positions = 4
+	spawn_positions = 4
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
@@ -238,6 +309,12 @@ Security Officer
 	minimal_access = list(ACCESS_VAULT_F13, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS,
 						ACCESS_MORGUE, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CARGO,
 						ACCESS_MINERAL_STOREROOM)
+
+	loadout_options = list(
+		/datum/outfit/loadout/sec_ratting,
+		/datum/outfit/loadout/sec_policing
+	)
+
 /datum/outfit/job/vault/f13security
 	name = "Vault-tec Security"
 	jobtype = /datum/job/vault/f13officer
@@ -288,6 +365,21 @@ Security Officer
 	keyslot = new /obj/item/encryptionkey/headset_vault_security
 	keyslot2 = new /obj/item/encryptionkey/headset_sci
 
+/datum/outfit/loadout/sec_ratting
+	name = "Rat Hunting"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/combat = 1,
+		/obj/item/ammo_box/magazine/tommygunm45/stick = 3
+	)
+
+/datum/outfit/loadout/sec_policing
+	name = "Policing"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
+		/obj/item/ammo_box/magazine/m10mm/smg = 2,
+		/obj/item/shield/riot/tele = 1
+	)
+
 /*
 Vault Engineer
 */
@@ -295,7 +387,7 @@ Vault Engineer
 /datum/job/vault/f13vaultengineer
 	title = "Vault-tec Engineer"
 	flag = F13VAULTENGINEER
-	department_head = list("Overseer")
+	department_head = list("Vault Coordinator")
 	total_positions = 3 //was 4-4
 	spawn_positions = 3
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
