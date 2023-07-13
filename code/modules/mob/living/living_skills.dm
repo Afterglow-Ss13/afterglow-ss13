@@ -80,7 +80,7 @@
 	if (SKILL_GUNS == check)
 		return skill_guns + special_a
 	if (SKILL_ENERGY == check)
-		return skill_energy + special_a
+		return skill_energy + special_p
 	if (SKILL_UNARMED == check)
 		return skill_unarmed + round((special_a + special_s)/2)
 	if (SKILL_MELEE == check)
@@ -144,7 +144,7 @@
 /mob/proc/get_skill_all_values()
 	var/list/dat = list()
 	dat = list(list("name" = SKILL_GUNS, "value" = num2text(skill_guns + special_a), "description" = "Applies to ballistic weapons. Controls things like recoil and dispersion. Higher values; tighter firing arcs and slower recoil buildup, Less aim fumble chance."),
-	list("name" = SKILL_ENERGY, "value" = num2text(skill_energy + special_a), "description" = "Applies to energy weapons. Controls things like recoil and dispersion. Higher values slower recoil buildup, Also important for failure to fire chance and aim fumbles."),
+	list("name" = SKILL_ENERGY, "value" = num2text(skill_energy + special_p), "description" = "Applies to energy weapons. Controls things like recoil and dispersion. Higher values slower recoil buildup, Also important for failure to fire chance and aim fumbles."),
 	list("name" = SKILL_UNARMED, "value" = num2text(skill_unarmed + round((special_a + special_s)/2)), "description" = "Hit chance when unarmed, also determines chances to disarm and break out of grabs and the like."),
 	list("name" = SKILL_MELEE, "value" = num2text(skill_melee + round((special_a + special_s)/2)), "description" = "Hit chance when using any melee weapon. Also influnces blocking."),
 	list("name" = SKILL_THROWING, "value" = num2text(skill_throwing + special_a), "description" = "Hit chance for projectiles thrown by your character."),

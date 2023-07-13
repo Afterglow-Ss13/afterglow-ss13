@@ -279,7 +279,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	//Combat
 	var/skill_guns_base = 30
-	var/skill_energy_base = 25
+	var/skill_energy_base = 30
 	var/skill_unarmed_base = 45
 	var/skill_melee_base = 40
 	var/skill_throwing_base = 35
