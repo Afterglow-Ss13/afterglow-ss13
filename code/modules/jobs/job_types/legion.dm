@@ -654,7 +654,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 	loadout_options = list(	// ALL: .45 Revolver, Machete
 		/datum/outfit/loadout/expambusher,	// 10mm, Coffeepot bomb, Smokebomb
-		/datum/outfit/loadout/expsniper,	// M1, Mine, Smokebomb
+		/datum/outfit/loadout/expsniper,	// SKS, Mine, Smokebomb
 		/datum/outfit/loadout/expsapper,	// Lever-action shotgun, 2x Frags, Smokebomb
 		)
 
@@ -709,7 +709,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/outfit/loadout/expsniper
 	name = "Sniper"
 	glasses = /obj/item/clothing/glasses/sunglasses/big
-	suit_store = /obj/item/gun/ballistic/rifle/hunting
+	suit_store = /obj/item/gun/ballistic/automatic/m1garand/sks
 	backpack_contents = list(
 		/obj/item/ammo_box/a762 = 3,
 		/obj/item/grenade/smokebomb = 1,
